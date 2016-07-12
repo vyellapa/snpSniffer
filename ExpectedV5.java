@@ -5,13 +5,10 @@
  * Time: 1:15 PM
  * To change this template use File | Settings | File Templates.
  */
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.util.Scanner;
-import java.lang.Object;
-import java.io.PrintWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class ExpectedV5 {
     private int i,j=0,l=0,x=0,sample=0;
@@ -23,7 +20,7 @@ public class ExpectedV5 {
     String tokens[];
 
     void Run(String userDelim, String number, String flatFile) throws IOException {
-    //Get the list of all samples by reading first line of flatfile
+        //Get the list of all samples by reading first line of flatfile
         File f = new File("snpSniffer_output.txt");
         if(f.exists() && !f.isDirectory()) { f.delete(); }
         Scanner ped=new Scanner(new FileReader(flatFile));
@@ -38,8 +35,8 @@ public class ExpectedV5 {
 
         for(i=0;i<l;i++){
             if(!line1Tokens[i].equals("Sample")) {
-            CheckV5 o1 = new CheckV5();
-            o1.output(line1Tokens[i], flatFile);
+                CheckV5 o1 = new CheckV5();
+                o1.output(line1Tokens[i], flatFile);
             }
         }
         String[][] data=new String[388][l];
@@ -52,14 +49,14 @@ public class ExpectedV5 {
             String[] sample1=tokens[0].split(userDelim);
             String[] sample2=tokens[2].split(userDelim);
             if(number.equals("1")){ s1= sample1[0]; s2=sample2[0];}
-           else if(number.equals("2")){ s1= sample1[0].concat(sample1[1]); s2=sample2[0].concat(sample2[1]);}
+            else if(number.equals("2")){ s1= sample1[0].concat(sample1[1]); s2=sample2[0].concat(sample2[1]);}
             else if(number.equals("3")){ s1= (sample1[0].concat(sample1[1])).concat(sample1[2]); s2=(sample2[0].concat(sample2[1])).concat(sample2[2]);}
             ratio = Double.parseDouble((tokens[5].split("="))[1]);
 
 
-             if(s1.equals(s2) && ratio > 0.80){
-                   System.out.println(line);
-             }
+            if(s1.equals(s2) && ratio > 0.80){
+                System.out.println(line);
+            }
         }
         ped1.close();
 

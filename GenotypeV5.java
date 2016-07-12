@@ -5,11 +5,10 @@
  * Time: 11:58 AM
  * To change this template use File | Settings | File Templates.
  */
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
 public class GenotypeV5 {
     //void Run(String pos, String ref, String bam) throws InterruptedException {
-    void Run(String ref, String bam) throws IOException, InterruptedException {
+    void Run(String ref, String bam) throws IOException {
         try
         {   //String positions=pos;
             String reference=ref;
@@ -25,12 +24,18 @@ public class GenotypeV5 {
 
             Process p = Runtime.getRuntime().exec(command);
             p.waitFor();
+
         }
         catch(IOException e)
         {
             System.out.println(e.getMessage());
+
         }
+        catch(InterruptedException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
 
     }
 }
-

@@ -1,4 +1,3 @@
-
 /**
  * Created with IntelliJ IDEA.
  * User: vyellapantula
@@ -6,13 +5,9 @@
  * Time: 12:00 AM
  * To change this template use File | Settings | File Templates.
  */
-import java.io.IOException;
 import java.io.FileReader;
-import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Scanner;
-import java.lang.Object;
-import java.io.PrintWriter;
-import java.io.*;
 
 public class HetV5 {
     private int i,j=0,l=0,x=0;
@@ -32,7 +27,7 @@ public class HetV5 {
         }
 
         //for(i=0;i<l;i++){
-          //  if(line1Tokens[i].equals(Name)) {sample=i;}
+        //  if(line1Tokens[i].equals(Name)) {sample=i;}
         //}
 
         String[][] data=new String[388][l];
@@ -82,12 +77,11 @@ public class HetV5 {
             ratio=het/total;
 
             if(!data[0][j].equals("Sample")){
-            System.out.println(data[0][j] + "\t" +hom+"\t"+het+ "\t" +total+"\t"+ ratio);
+                System.out.println(data[0][j] + "\t" +hom+"\t"+het+ "\t" +total+"\t"+ ratio);
             }
 
             hom=het=0.00;
         }
 
     }
-    }
-
+}

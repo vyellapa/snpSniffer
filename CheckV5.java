@@ -1,4 +1,3 @@
-
 /**
  * Created with IntelliJ IDEA.
  * User: vyellapantula
@@ -6,13 +5,8 @@
  * Time: 12:00 AM
  * To change this template use File | Settings | File Templates.
  */
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.util.Scanner;
-import java.lang.Object;
-import java.io.PrintWriter;
 import java.io.*;
+import java.util.Scanner;
 
 public class CheckV5 {
     private int i,j=0,l=0,x=0,sample=0;
@@ -61,7 +55,7 @@ public class CheckV5 {
             ratio=match/count;
 
             if(!data[0][j].equals(data[0][sample]) && !data[0][sample].equals("Sample") && !data[0][j].equals("Sample")){
-            System.out.println(data[0][sample] + " & " + data[0][j] + " count="+count+" match="+match+ " ratio=" + ratio);
+                System.out.println(data[0][sample] + " & " + data[0][j] + " count="+count+" match="+match+ " ratio=" + ratio);
             }
 
             match=count=0.0;

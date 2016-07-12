@@ -1,9 +1,7 @@
-import java.io.IOException;
 import java.io.FileReader;
-import java.io.BufferedReader;
-import java.util.Scanner;
-import java.lang.Object;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
