@@ -60,32 +60,31 @@ java -jar snpSniffer.jar -help
 
 ### Example usage:
 
-    Generate the genotypes in a vcf format at specific genomic loci:
+Generate the genotypes in a vcf format at specific genomic loci:
 
-    java -jar ~/local/bin/snpSniffer.jar -genotype /lustre/vyellapa/reference.fa /lustre/vyellapa/sample1.bam
+	java -jar ~/local/bin/snpSniffer.jar -genotype /lustre/vyellapa/reference.fa /lustre/vyellapa/sample1.bam
 
-    Adding the genotypes generated to a flat file "database.ini," provided
-    Step 1, will generate a vcf having the same name as the bam in the same directory, this will be added to database.ini with same name:
+Adding the genotypes generated to a flat file "database.ini," provided
+Step 1, will generate a vcf having the same name as the bam in the same directory, this will be added to database.ini with same name:
 
-    java -jar ~/local/bin/snpSniffer.jar -add /lustre/vyellapa/ALMC1_RNA.vcf /lustre/vyellapa/sample_database.ini
+	java -jar ~/local/bin/snpSniffer.jar -add /lustre/vyellapa/ALMC1_RNA.vcf /lustre/vyellapa/sample_database.ini
 
-    Compare the genotypes for samples of interest(after 2 or more vcf's are added), examine the snpSniffer output and infer if any mixups occurred:
+Compare the genotypes for samples of interest(after 2 or more vcf's are added), examine the snpSniffer output and infer if any mixups occurred:
 
-    java -jar ~/local/bin/snpSniffer.jar -check ALMC1_RNA /lustre/vyellapa/sample_database.ini
+	java -jar ~/local/bin/snpSniffer.jar -check ALMC1_RNA /lustre/vyellapa/sample_database.ini
 
-    Identify all expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
+Identify all expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
 
-       for all samples will also be generated :
+for all samples will also be generated :
 
-       java -jar ~/local/bin/snpSniffer.jar -expected "_" 1 /lustre/vyellapa/sample_database.ini
+	java -jar ~/local/bin/snpSniffer.jar -expected "_" 1 /lustre/vyellapa/sample_database.ini
 
-    Identify all not-expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
+Identify all not-expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
 
-       for all samples will also be generated :
+for all samples will also be generated :
 
-       java -jar ~/local/bin/snpSniffer.jar -notExpected "_" 1 /lustre/vyellapa/sample_database.ini
+	java -jar ~/local/bin/snpSniffer.jar -notExpected "_" 1 /lustre/vyellapa/sample_database.ini
 
- 
 
 ### Example output:
 
@@ -93,14 +92,14 @@ Step 3 above should generate lines of output, depending on number of samples, si
 
 In the output given below, ALMC1 and ALMC2 have a ratio of ~0.96 suggesting both sequences come from the same individual. However, ALMC1 and XG6 have have a ratio of ~0.35 suggesting that the sequences do not come from the same individual.
 
-ALMC1_RNA & ALMC1_EXOME count=121.0 match=116.0 ratio=0.9586776859504132
+	ALMC1_RNA & ALMC1_EXOME count=121.0 match=116.0 ratio=0.9586776859504132
 
-ALMC1_RNA & XG6_EXOME count=114.0 match=40.0 ratio=0.3508771929824561
-
-
+	ALMC1_RNA & XG6_EXOME count=114.0 match=40.0 ratio=0.3508771929824561
 
 
-ACADEMIC AND RESEARCH LICENSE
+
+
+#### ACADEMIC AND RESEARCH LICENSE
 Copyright (c) 2012, The Translational Genomics Research Institute.
 All rights reserved
 
