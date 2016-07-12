@@ -1,4 +1,5 @@
 # About snpSniffer
+___
 snpSniffer is a genotype based tool to ensure no cross sample contamination or swaps have occured using next generation sequencing data. It currently works on whole genome, exome and RNA-Seq data.
 
 ## Identifying sample contamination and mixups involves 3 steps:
