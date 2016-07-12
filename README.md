@@ -1,4 +1,4 @@
-## About snpSniffer
+# About snpSniffer
 snpSniffer is a genotype based tool to ensure no cross sample contamination or swaps have occured using next generation sequencing data. It currently works on whole genome, exome and RNA-Seq data.
 
 ## Identifying mixups involves 3 steps:
@@ -24,64 +24,65 @@ All the above steps can be run using snpSniffer.
 
 
 ## Usage
-### 1) To generate genotypes from a bam:
-java -jar snpSniffer.jar -genotype <fullFilePath/reference> <fullFilePath/BAM> 
-        Alternately, genotypes can be generated using:
+#### 1) To generate genotypes from a bam:
+	java -jar snpSniffer.jar -genotype <fullFilePath/reference> <fullFilePath/BAM> 
 
-geno <fullFilePath/reference> <fullFilePath/BAM>
+Alternately, genotypes can be generated using:
 
- *Users should make sure bam is indexed
+	geno <fullFilePath/reference> <fullFilePath/BAM>
 
-### 2) To add genotypes from a vcf:
+**Users should make sure bam is indexed
 
-java -jar snpSniffer.jar -add <fullFilePath/VCF fileName> <fullFilePath/database.ini>
+#### 2) To add genotypes from a vcf:
 
-### 3) To view all samples:
+	java -jar snpSniffer.jar -add <fullFilePath/VCF fileName> <fullFilePath/database.ini>
 
-java -jar snpSniffer.jar -check Samples <fullFilePath/database.ini>
+#### 3) To view all samples:
 
-### 4) To check concordance of genotypes for a sample:
-java -jar snpSniffer.jar -check <sampleName> <fullFilePath/database.ini>
+	java -jar snpSniffer.jar -check Samples <fullFilePath/database.ini>
 
-### 4) To check for cross sample contamination:
-java -jar snpSniffer.jar -het <fullFilePath/database.ini>
+#### 4) To check concordance of genotypes for a sample:
+	java -jar snpSniffer.jar -check <sampleName> <fullFilePath/database.ini>
 
-### 5) To identify expected matches:
-java -jar snpSniffer.jar -expected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
+#### 4) To check for cross-sample contamination:
+	java -jar snpSniffer.jar -het <fullFilePath/database.ini>
 
-### 6) To identify not-expected matches::
+#### 5) To identify expected matches:
+	java -jar snpSniffer.jar -expected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
 
-java -jar snpSniffer.jar -notExpected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
+#### 6) To identify not-expected matches::
 
-### 7) For help:
+	java -jar snpSniffer.jar -notExpected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
 
-java -jar snpSniffer.jar -help
+#### 7) For help:
+
+	java -jar snpSniffer.jar -help
 
 
 ### Example usage:
 
-Generate the genotypes in a vcf format at specific genomic loci:
+###### Generate the genotypes in a vcf format at specific genomic loci:
 
 	java -jar ~/local/bin/snpSniffer.jar -genotype /lustre/vyellapa/reference.fa /lustre/vyellapa/sample1.bam
 
-Adding the genotypes generated to a flat file "database.ini," provided
-Step 1, will generate a vcf having the same name as the bam in the same directory, this will be added to database.ini with same name:
+###### Adding the genotypes generated to a flat file "database.ini," provided
+###### Step 1, will generate a vcf having the same name as the bam in the same directory, this will be added to database.ini with same name:
 
 	java -jar ~/local/bin/snpSniffer.jar -add /lustre/vyellapa/ALMC1_RNA.vcf /lustre/vyellapa/sample_database.ini
 
-Compare the genotypes for samples of interest(after 2 or more vcf's are added), examine the snpSniffer output and infer if any mixups occurred:
+###### Compare the genotypes for samples of interest(after 2 or more vcf's are added), examine the snpSniffer output and infer if any mixups occurred:
 
 	java -jar ~/local/bin/snpSniffer.jar -check ALMC1_RNA /lustre/vyellapa/sample_database.ini
 
-Identify all expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
+######Identify all expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
 
-for all samples will also be generated :
+######  for all samples will also be generated :
 
 	java -jar ~/local/bin/snpSniffer.jar -expected "_" 1 /lustre/vyellapa/sample_database.ini
 
-Identify all not-expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
+######Identify all not-expected matches using a 0.76 threshold value (a text file snpSniffer_output.txt with concordance ratio's 
 
-for all samples will also be generated :
+######  for all samples will also be generated :
 
 	java -jar ~/local/bin/snpSniffer.jar -notExpected "_" 1 /lustre/vyellapa/sample_database.ini
 
