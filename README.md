@@ -1,7 +1,7 @@
-About snpSniffer
+## About snpSniffer
 snpSniffer is a genotype based tool to ensure no cross sample contamination or swaps have occured using next generation sequencing data. It currently works on whole genome, exome and RNA-Seq data.
 
-Identifying mixups involves 3 steps:
+## Identifying mixups involves 3 steps:
 
 1. Generate the genotypes in a vcf format at specific genomic loci
 
@@ -12,11 +12,7 @@ Identifying mixups involves 3 steps:
 All the above steps can be run using snpSniffer.
 
 
-Download:
-
-Download the latest source here.
-
-Installation:
+## Installation:
 
 ✓ Download snpSniffer.jar, geno, positions.txt and database.ini 
 
@@ -27,8 +23,8 @@ Installation:
 ✓ samtools and bcfutils should be installed at a location in the PATH
 
 
-Usage
-1) To generate genotypes from a bam:
+## Usage
+### 1) To generate genotypes from a bam:
 java -jar snpSniffer.jar -genotype <fullFilePath/reference> <fullFilePath/BAM> 
         Alternately, genotypes can be generated using:
 
@@ -36,32 +32,33 @@ geno <fullFilePath/reference> <fullFilePath/BAM>
 
  *Users should make sure bam is indexed
 
-2) To add genotypes from a vcf:
+### 2) To add genotypes from a vcf:
 
 java -jar snpSniffer.jar -add <fullFilePath/VCF fileName> <fullFilePath/database.ini>
 
-3) To view all samples:
+### 3) To view all samples:
 
 java -jar snpSniffer.jar -check Samples <fullFilePath/database.ini>
 
-4) To check concordance of genotypes for a sample:
-
+### 4) To check concordance of genotypes for a sample:
 java -jar snpSniffer.jar -check <sampleName> <fullFilePath/database.ini>
 
-5) To identify expected matches:
+### 4) To check for cross sample contamination:
+java -jar snpSniffer.jar -het <fullFilePath/database.ini>
+
+### 5) To identify expected matches:
 java -jar snpSniffer.jar -expected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
 
-6) To identify not-expected matches::
+### 6) To identify not-expected matches::
 
 java -jar snpSniffer.jar -notExpected <delimiter> <# of delimited fields that define sample name> <fullFilePath/database.ini>
 
-7) For help:
+### 7) For help:
 
 java -jar snpSniffer.jar -help
 
- 
 
-Example usage:
+### Example usage:
 
     Generate the genotypes in a vcf format at specific genomic loci:
 
@@ -90,7 +87,7 @@ Example usage:
 
  
 
-Example output:
+### Example output:
 
 Step 3 above should generate lines of output, depending on number of samples, similar to the one below. It shows that between ALMC1 and ALMC2, 121 genotypes were obtained with good quality out of which 116 positions match. The "ratio" field is the ratio of match to count and ratio>0.76 signifies that the two samples match.
 
@@ -101,9 +98,6 @@ ALMC1_RNA & ALMC1_EXOME count=121.0 match=116.0 ratio=0.9586776859504132
 ALMC1_RNA & XG6_EXOME count=114.0 match=40.0 ratio=0.3508771929824561
 
 
-
- Licensing
-snpSniffer Academic And Research License
 
 
 ACADEMIC AND RESEARCH LICENSE
