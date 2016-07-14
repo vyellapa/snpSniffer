@@ -102,6 +102,7 @@ In the output given below, ALMC1 and ALMC2 have a ratio of ~0.96 suggesting both
 
 
 #### ACADEMIC AND RESEARCH LICENSE
+<sub>
 Copyright (c) 2012, The Translational Genomics Research Institute.
 All rights reserved
 
@@ -188,3 +189,5 @@ documentation or modification) is found to infringe upon the
 intellectual property rights of any third party. Upon termination, you
 must destroy all copies of the Software and any documentation or other
 associated materials.
+
+</sub>
