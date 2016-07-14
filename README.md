@@ -115,6 +115,7 @@ License before using the Software. YOUR DOWNLOAD AND USE OF THE SOFTWARE
 INDICATES YOUR ACCEPTANCE OF THIS LICENSE AND ALL OF THE FOLLOWING TERMS
 AND CONDITIONS.
 
+<sub>
 2. Academic and Research Purposes. This License is limited to, and you
 may use the Software solely for, your own internal and non-commercial
 use for academic and research purposes. Without limiting the foregoing,
@@ -122,6 +123,7 @@ you may not use the Software as part of, or in any way in connection with
 the production, marketing, sale or support of any commercial product or
 service or for any governmental purposes.
 
+<sub>
 3. Commercial Use. If you desire to use the Software for any commercial
 or governmental purpose whatsoever, you agree to negotiate in good faith
 to obtain an appropriate license from TGen prior to such commercial or
@@ -133,6 +135,7 @@ of the Software or its modifications. Any inquiries or notices regarding
 commercial or governmental use of the Software should be directed to
 jkeats@tgen.org.
 
+<sub>
 4. Disclaimer of Warranty. Because the Software is licensed free of
 charge, TGen makes no warranties or representations of any kind
 regarding the Software or any modifications or documentation relating to
@@ -146,6 +149,7 @@ EXPRESSED OR IMPLIED. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE
 OF THE SOFTWARE IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU
 ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
+<sub>
 5. Limitation of Liability. IN NO EVENT WILL TGEN BE LIABLE TO YOU OR
 ANY THIRD PARTIES FOR DAMAGES OF ANY KIND, INCLUDING WITHOUT LIMITATION,
 GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF
@@ -155,16 +159,19 @@ SUSTAINED BY YOU OR THIRD PARTIES, OR A FAILURE OF THE SOFTWARE TO
 OPERATE WITH OTHER PROGRAMS, EVEN IF TGEN HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGES.
 
+<sub>
 6. No Other Rights Granted. Except as expressly stated herein, this
 License does not constitute a grant to you, or an intention or
 commitment to grant to you, any right, title or interest in or to the
 Software or TGen's trade secrets or other intellectual property
 related to the Software.
 
+<sub>
 7. No Assignment. This License is personal to the person or entity
 downloading and using the Software pursuant hereto and you may not sell,
 assign or transfer it to any other party.
 
+<sub>
 8. Use of Names. You may not use the names 'The Translational
 Genomics Research Institute' or 'TGen', or any variations or
 adaptations thereof, or any marks related thereto, in any publicity or
@@ -173,12 +180,14 @@ which may be granted or withheld in TGen's sole discretion.  In any work
 or product derived from the use of this Software, proper attribution of
 the authors as the source of the Software or data must be made.
 
+<sub>
 9. Governing Law. This License shall be governed by the laws of the
 State of Arizona, without regard to choice of law principles.  Any legal
 action or proceeding arising out of or relating to this License must be
 instituted in a state or federal court in Phoenix, Arizona and you
 irrevocably submit to such jurisdiction.
 
+<sub>
 10. Termination. This License is effective until terminated. TGen may
 terminate this License upon 60 days written notice to you.  You may
 terminate this License at any time by destroying all copies of the
