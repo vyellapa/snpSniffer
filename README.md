@@ -106,6 +106,7 @@ In the output given below, ALMC1 and ALMC2 have a ratio of ~0.96 suggesting both
 Copyright (c) 2012, The Translational Genomics Research Institute.
 All rights reserved
 
+<sub>
 1. License. The Translational Genomics Research Institute (TGen) hereby
 grants you a non-exclusive, non-transferable right to use the snpSniffer
 software (the "Software"), subject to the terms and conditions of this
