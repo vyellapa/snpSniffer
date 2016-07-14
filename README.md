@@ -19,9 +19,9 @@ All the above steps can be run using snpSniffer.
 
 ✓ Copy snpSniffer.jar, geno and positions.txt to a location in the PATH
 
-✓ Copy database.ini to a location where you want to run snpSniffer; preferably where the aligned reads are present
+✓ Copy database.ini to a location where you want to run snpSniffer; preferably where bam files are present
 
-✓ samtools and bcfutils should be installed at a location in the PATH
+✓ samtools and bcfutils should be installed at a location in the PATH. This version is tested with samtools-0.1.19.
 
 
 ## Usage
